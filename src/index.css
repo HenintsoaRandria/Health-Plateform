@@ -1,13 +1,17 @@
 body {
-  margin: 0;
+  /* margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
+  /* background-image: url('./components/images/2021-162-mh-photo-centre-de-sante-missions-fonctionnement-gi-1221713778-1024x577.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; */
 }
-
+/* 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */

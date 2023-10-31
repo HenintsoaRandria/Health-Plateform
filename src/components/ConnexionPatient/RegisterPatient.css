@@ -1,0 +1,172 @@
+.main-Register{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+
+    .left-side{
+        flex: 0.33;
+        background-color: #7175ff;
+        .header{
+            height: 15rem;
+            #logo-img{
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        
+        .body{
+            height: 10rem;
+            margin-top: 2rem;
+            background: white;
+
+            #reg-img{
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        p{
+            color: white;
+            padding: 1.8rem 0.8rem;
+            text-align: center;
+            font-size: smaller;
+        }
+
+    }
+
+    .right-side{
+        flex: 0.07;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: #f9f9f9;
+        .top-right{
+            float: right;
+            margin-right: 1rem;
+            font-size: small;
+
+        #Links-signin{
+            text-decoration: none;
+            font-style: 600;
+            margin-left: 3rem;
+            cursor: pointer;
+            color: #7175ff;
+            &:hover{
+                color: gray;
+            }
+        }
+        }
+    }
+}
+
+    .body-right{
+        height: 40%;
+        width: 50%;
+        
+
+        .container{
+            height: 50%;
+            width: 60%;
+            margin: 2rem auto;
+            box-shadow: 0rem 0rem 2rem 0.1rem #7175ff;
+            border-radius: 0.5rem;
+            background-color: #f9f9f9;
+            /* .input-group{
+                width: 60%;
+                position: relative; */
+                /* h5{
+                    font-size: small;
+                    font-weight: 300;
+                    color: gray;
+                    left: 20%;
+                    top: 0.5rem;
+                    margin: 0.5rem auto;
+                    background: white;
+                } */
+                /* input{
+                    margin: 0.2rem auto;
+                    width: 60%;
+                    border: none;
+                    padding-left: 0.5rem 0.5rem;
+                    box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem gray;
+
+                    &:focus{
+                        outline: none;
+
+                    }
+
+
+                } */
+
+                /* #sbtn{
+                    width: 60%;
+                    background: #7175ff;
+                    color: white;
+                    cursor: pointer;
+                    border: none;
+                    padding: 0.5rem 2.5rem;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                    box-shadow: 0.5rem 0.5rem 1rem 0.1rem gray;
+                    }
+                } */
+
+                h3{
+                    align-items: center;
+                }
+                input{
+                    display: block;
+                    outline: none;
+                    border: none;
+                    height: 2rem;
+                    width: 100%;
+                    margin: auto;
+                    margin-bottom: 1.5rem;
+                    padding: 0.2rem 1rem;
+                    color: gray;
+                    transition: all 0.1s ease-in-out;
+                
+                    &:focus{
+                      outline: none;
+                      border: none;
+                    }
+                
+                    &:hover{
+                      outline: 0.5px solid #7175ff;
+                      box-shadow: 2px 2px 9px -1px #7175ff;
+                    }
+                  }
+                
+                  label{
+                    display: block;
+                    text-align: left;
+                    width: 70%;
+                    margin: auto;
+                    float: left;
+                    width: 70%;
+                    font-size: small;
+                    color: gray;
+                    margin-bottom: 0.5rem;
+                  }
+
+                  .sub_butt{
+                    width: 50%;
+                    background: #7175ff;
+                    color: #fff;
+                    border: none;
+                    cursor: pointer;
+                    padding: 0.5rem 1rem;
+                    transition: all 0.5 ease;
+                    &:hover{
+                      box-shadow: 0.5px 0.5px 6px -1px black;
+                      transform: translateY(-5px);
+                    }
+                
+                  }
+            }
+        }
+    
