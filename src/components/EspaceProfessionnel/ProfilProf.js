@@ -1,11 +1,11 @@
-import React,{Component} from 'react'
+import React,{Component} from 'react';
 import axios from 'axios';
-import './Sidebar.css';
+import './sidebarProf.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import avatar2 from '../images/avatar2.jpg';
+import avatar2 from '../images/avatar2.jpg'
 
-class UserProfil extends Component {
 
+class ProfilProf extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,6 +13,10 @@ class UserProfil extends Component {
        // État pour le formulaire de profil
       name: '',
       last_name:'',
+      nif:'',
+      stat:'',
+      type:'',
+      num_ordre:'',
       email: '',
       phone_number: '',
       adresse: '',
@@ -20,9 +24,9 @@ class UserProfil extends Component {
       
 
        // État pour le formulaire de modification de mot de passe
+       pwd: '',
        password: '',
-       newpassword: '',
-       renewpassword: '',
+       password_confirmation: '',
     };
   }
 
@@ -35,9 +39,9 @@ class UserProfil extends Component {
   handleProfileSubmit = async (e) => {
     e.preventDefault();
 
-    // Effectuez la requête vers l'API Laravel pour mettre à jour le profil
+    //requête vers l'API Laravel pour mettre à jour le profil
     try {
-      const response = await axios.put('http://localhost:8000/api/patient/update/info', {
+      const response = await axios.patch('http://localhost:8000/api/professionnel/update/info', {
         adresse: this.state.adresse,
         phone_number: this.state.phone_number,
         email: this.state.email,
@@ -51,39 +55,38 @@ class UserProfil extends Component {
   };
 
 
+ // Fonction de gestion de la soumission pour le formulaire de modification de mot de passe
+ handlePasswordSubmit = async (e) => {
+  e.preventDefault();
 
+  const { pwd, password, password_confirmation } = this.state;
 
-  // Fonction de gestion de la soumission pour le formulaire de modification de mot de passe
-  handlePasswordSubmit = async (e) => {
-    e.preventDefault();
+  // Vérification si les mots de passe correspondent ou effectuez d'autres validations nécessaires.
 
-    const { password, newpassword, renewpassword } = this.state;
+  // la requête vers l'API Laravel pour mettre à jour le mot de passe
+  try {
+    const response = await axios.put('http://localhost:8000/api/professionnel/update/pwd', {
+      current_password: pwd,
+      new_password: password,
+      renew_password: password_confirmation,
+    });
 
-    // Vérifiez ici si les mots de passe correspondent ou effectuez d'autres validations nécessaires.
+    // Traitez la réponse si nécessaire
+    console.log(response.data);
+  } catch (error) {
+    console.error('Erreur lors de la requête API pour le mot de passe:', error);
+  }
+};
 
-    // Effectuez la requête vers l'API Laravel pour mettre à jour le mot de passe
-    try {
-      const response = await axios.put('URL_PASSWORD_API', {
-        current_password: password,
-        new_password: newpassword,
-        renew_password: renewpassword,
-      });
-
-      // Traitez la réponse si nécessaire
-      console.log(response.data);
-    } catch (error) {
-      console.error('Erreur lors de la requête API pour le mot de passe:', error);
-    }
-  };
-  
-  render() {
-   
+render() {
+ 
   return(
     <div>
       <main id="main" class="main">
 
       <div class="pagetitle">
       <h1>Profil</h1>
+      
     </div>
     <section class="section profile">
       <div class="row">
@@ -93,8 +96,8 @@ class UserProfil extends Component {
             <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
               <img src={avatar2} alt="Profile" class="rounded-circle"></img>
-              {/* <h2>Randria</h2>
-              <h3>Henintsoa</h3> */}
+              {/* <h2>Hajaina</h2>
+              <h3>Rémi</h3> */}
                 <h2>{this.state.name}</h2>
                 <h3>{this.state.last_name}</h3>
             </div>
@@ -124,8 +127,7 @@ class UserProfil extends Component {
               </ul>
               <div class="tab-content pt-2">
 
-                <div class="tab-pane fade show active profile-overview" id="profile-overview">
-
+                <div class="tab-pane fade show active profile-overview" id="profile-overview"> 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label ">Nom</div>
                     <div class="col-lg-9 col-md-8">{this.state.name}</div>
@@ -135,7 +137,28 @@ class UserProfil extends Component {
                     <div class="col-lg-3 col-md-4 label ">Prénoms</div>
                     <div class="col-lg-9 col-md-8">{this.state.last_name}</div>
                   </div>
- 
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label ">NIF</div>
+                    <div class="col-lg-9 col-md-8">{this.state.nif}</div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label ">Numéro statistique</div>
+                    <div class="col-lg-9 col-md-8">{this.state.stat}</div>
+                  </div>
+
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label">Spécialité</div>
+                    <div class="col-lg-9 col-md-8">{this.state.type}</div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label">Numéro d'ordre</div>
+                    <div class="col-lg-9 col-md-8">{this.state.num_ordre}</div>
+                  </div>
+
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Email</div>
                     <div class="col-lg-9 col-md-8">{this.state.email}</div>
@@ -146,7 +169,6 @@ class UserProfil extends Component {
                     <div class="col-lg-9 col-md-8">{this.state.phone_number}</div>
                   </div>
 
-
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Adresse</div>
                     <div class="col-lg-9 col-md-8">{this.state.adresse}</div>
@@ -156,8 +178,9 @@ class UserProfil extends Component {
 
                 <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
-                  <form onSubmit={this.handleSubmit}>
-                    {/* <div class="row mb-3">
+                 
+                  <form>
+                    <div class="row mb-3">
                       <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profil Image</label>
                       <div class="col-md-8 col-lg-9">
                         <img src={avatar2} alt="Profile"></img>
@@ -166,7 +189,7 @@ class UserProfil extends Component {
                           <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
                         </div>
                       </div>
-                    </div> */}
+                    </div>
 
                     <div class="row mb-3">
                       <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Email</label>
@@ -182,7 +205,7 @@ class UserProfil extends Component {
                       </div>
                     </div>
 
-
+                    
                     <div class="row mb-3">
                       <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Téléphone</label>
                       <div class="col-md-8 col-lg-9">
@@ -191,7 +214,6 @@ class UserProfil extends Component {
                         type="text" 
                         class="form-control" 
                         id="Phone" 
-                        // value="(436) 486-3538 x29071">
                         value={this.state.phone_number}
                         onChange={this.handleChange}
                         />
@@ -206,14 +228,12 @@ class UserProfil extends Component {
                         type="text" 
                         class="form-control" 
                         id="Address" 
-                        // value="A108 Adam Street, New York, NY 535022"
                         value={this.state.adresse}
                         onChange={this.handleChange}
                         />
                       </div>
                     </div>
 
-                   
                     <div class="text-center">
                       <button type="submit" class="btn btn-primary">Enregistrer</button>
                     </div>
@@ -228,12 +248,12 @@ class UserProfil extends Component {
                     <div class="row mb-3">
                       <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Mot de passe actuel</label>
                       <div class="col-md-8 col-lg-9">
-                        <input 
+                      <input 
                         name="password" 
                         type="password" 
                         class="form-control" 
                         id="currentPassword" 
-                        value={this.state.password}
+                        value={this.state.pwd}
                         onChange={this.handleChange}
                         />
                       </div>
@@ -242,12 +262,12 @@ class UserProfil extends Component {
                     <div class="row mb-3">
                       <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">Nouveau mot de passe</label>
                       <div class="col-md-8 col-lg-9">
-                        <input 
+                      <input 
                         name="newpassword" 
                         type="password" 
                         class="form-control" 
                         id="newpassword" 
-                        value={this.state.newpassword}
+                        value={this.state.password}
                         onChange={this.handleChange}
                         />
                       </div>
@@ -256,12 +276,12 @@ class UserProfil extends Component {
                     <div class="row mb-3">
                       <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Re-entrer nouveau mot de passe</label>
                       <div class="col-md-8 col-lg-9">
-                        <input 
+                      <input 
                         name="renewpassword" 
                         type="password" 
                         class="form-control" 
                         id="renewPassword"
-                        value={this.state.renewpassword}
+                        value={this.state.password_confirmation}
                         onChange={this.handleChange}
                         />
                       </div>
@@ -282,14 +302,13 @@ class UserProfil extends Component {
     </section>
 
   </main> 
-
     </div>
-   )
+   );
 
  }
 
- }
+}
 
-export default UserProfil;
+export default ProfilProf;
 
  

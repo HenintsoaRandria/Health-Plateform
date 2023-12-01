@@ -1,0 +1,248 @@
+/* .contact-section{
+    min-height: 100vh;
+    background: url('../images/med2.png') no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+  }
+
+.contact-section{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info{
+  color: #000;
+  max-width: 500px;
+  line-height: 65px;
+  padding-left: 50px;
+  font-size: 18px;
+}
+
+.contact-info{
+  margin-right: 20px;
+  font-size: 25px; 
+}
+
+.contact-form{
+  max-width: 700px;
+  margin-right: 50px;
+
+}
+
+.contact-info .contact-form{
+  flex: 1;
+
+}
+
+.contact-form h2{
+  color: #000;
+  text-align: center;
+  font-size: 35px;
+  text-transform: uppercase;
+  margin-bottom: 30px; 
+}
+
+.contact-form .text-box{
+  background: #7571ff;
+  color: #fff;
+  border: none;
+  width: calc(50% - 10px );
+  height: 50px;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 5px;
+  box-shadow:  0 1px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  opacity: 0.9;
+
+}
+
+.contact-form .text-box:first-child{
+  margin-right: 15px;
+
+}
+
+.contact-form textarea{
+  background: #000;
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  min-height: 200px;
+  max-height: 400px;
+  resize: vertical;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.contact-form .send-box{
+  float: right;
+  background: #2E94E3;
+  color: #fff;
+  border: none;
+  width: 120px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  transition-property: background;
+
+}
+
+.contact-form .send-btn:hover{
+  background: #0582E3;
+
+} */
+
+
+
+
+.contact{
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background: url('../images/med3.jpg'); */
+  background-color: #f9f9f9;
+  background-size: cover;
+
+}
+
+.contact .content{
+  max-width: 800px;
+  text-align: center;
+
+}
+
+.contact .content .texte{
+  font-size: 36px;
+  font-weight: 500;
+  color: #000;
+}
+
+.contact .content p{
+  font-weight: 300;
+  color: #000;
+  font-size: 20px;
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+
+}
+
+.container .contactInfo{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .contactInfo .box{
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+
+}
+
+.container .contactInfo .box .icon{
+  min-width: 60px;
+  height: 60px;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+
+}
+
+.container .contactInfo .box .text{
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #333;
+  flex-direction: column;
+  font-weight: 300;
+}
+
+.container .contactInfo .box .text h3{
+  font-weight: 500;
+  color: #7175ff;
+
+}
+
+.contactForm form{
+  width: 120%;
+  padding: 30px;
+  background: #fff;
+}
+.contactForm form h2{
+  font-size: 20px;
+  color: #333;
+  font-weight: 500;
+}
+
+.contactForm .inputBox input{
+  position: relative;
+  width: 110%;
+  margin-top: 10px;
+
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+  width: 100%;
+  padding: 5px 0;
+  font-size: 10px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+
+}
+
+.contactForm .inputBox span{
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 10px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+
+/* .contactForm .inputBox input:focus ~ span{
+  color: #e91e63;
+  font-size: 12px;
+  transform: translate(-20px);
+} */
+
+.contactForm .inputBox input[type="submit"]{
+  width: 100px;
+  background: #7175ff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 12px;
+
+}

@@ -1,0 +1,123 @@
+.home{
+    padding: 4rem 7%;
+    width: 100%;
+    background: var(background);
+}
+
+.main-home{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 6%;
+
+}
+
+.main-inner-home{
+    flex: 1 1 45rem;
+}
+
+.main-inner-home h2{
+    font-size: 40px;
+    font-weight: 500;
+    padding: 0.5rem 0;
+}
+
+.main-inner-home .right-content-img img{
+    width: 100%;
+    padding: 4rem;
+
+}
+.main-inner-home h1{
+    font-size: 40px;
+    padding-bottom: 2rem;
+    font-weight: 700;
+}
+.main-inner-home p{
+    font-size: 1.5rem;
+    line-height: 3rem;
+   
+}
+
+/* .home-back{
+    position:absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+} */
+
+.ripple{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #6699ff;
+    font-size: 38px;
+    line-height: 200px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.ripple:before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(color);
+    border-radius: 50%;
+    animation: animate l;
+
+}
+.services{
+    padding: 2rem 7%;
+    width: 100%;
+    background-color: var(background);
+}
+.service-heading h1{
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 3rem;
+}
+.service-heading h1 span{
+    color: #7175ff;
+
+}
+.main-services{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.main-inner-services{
+    flex: 1 1 300px;
+    padding: 1rem;
+    box-shadow: var(box-shadow);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.main-inner-services .services-img img{
+    width: 100%;
+}
+
+.services-content{
+    text-align: center;
+    background-color: white;
+}
+
+.services-content h2{
+    font-size: 22px;
+    padding: 2rem 0;
+}
+
+.services-content p{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    line-height: 2rem;
+}

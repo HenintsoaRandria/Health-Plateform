@@ -1,4 +1,4 @@
-.dropdown-menu{
+.dropdown-menu007{
     width: 200px;
     position: absolute;
     top: 80px;
@@ -6,17 +6,18 @@
     text-align: start;
 }
 
-.dropdown-menu li{
+.dropdown-menu007 li{
     background: #717ff5;
     cursor: pointer;
 }
 
-.dropdown-menu li:hover{
-    background: #6699cc;
+.dropdown-menu007 li:hover{
+    background: #f9f9f9;
 }
 
 .dropdown-menu.clicked{
     display: none;
+    color: #fff;
 }
 
 .dropdown-link{

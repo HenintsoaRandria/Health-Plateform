@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 import { MenuItems } from './MenuItems';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 import Dropdown from './Dropdown';
+// import MenuItems from './MenuItems';
 
  const Navbar = () => {
+    let location = useLocation().pathname;
     const [click, setClick] = useState(false);
     const [dropdown, setDropdown] = useState(false);
 
@@ -29,9 +31,10 @@ import Dropdown from './Dropdown';
 
   return(
     <>
+    {/* <nav className={location === '/patient' || location === '/userConnected' ? 'hidden' : 'show' +' navbar'}> */}
     <nav className='navbar'>
         <Link to='/' className='navbar-logo'>
-            E-TSABO <i className='fab fa-firstdraft'/>
+             <i className='fas fa-heartbeat'/> E-TSABO
         </Link>
         <div className='menu-icon' onClick={handleClick}>
           <i className={click? 'fas fa-times' : 'fas fa-bars'}/>

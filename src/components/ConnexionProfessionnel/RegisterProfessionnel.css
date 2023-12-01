@@ -64,8 +64,8 @@
 }
 
     .body-right{
-        height: 180%;
-        width: 50%;
+        height: 220%;
+        width: 70%;
         
 
         .container{
@@ -74,7 +74,7 @@
             margin: 2rem auto;
             box-shadow: 0rem 0rem 2rem 0.1rem #7175ff;
             border-radius: 0.5rem;
-            background-color: #f9f9f9;
+            background-color: #fff;
             /* .input-group{
                 width: 60%;
                 position: relative; */

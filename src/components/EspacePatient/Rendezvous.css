@@ -1,0 +1,173 @@
+#about .container .left{
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 500px) {
+    #about .container .right .icon {
+        margin: 15px;
+    }
+
+    #about .container .left{
+        text-align: justify;
+    }
+    
+}
+section#appointment {
+    background-color: #f9f9fb;
+    padding: 80px 0;
+}
+
+section#appointment .container{
+    padding: 70px 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    background-color: white;
+    height: 540px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 50px -10px #d6d6d6;
+
+}
+
+section#appointment .container .formulaire{
+    width: 50%;
+    margin-right: 35px;
+}
+section#appointment .container .formulaire h3{
+    font-size: 1.5em;
+    color: #2a2a2a;
+    margin-bottom: 50px;
+    
+}
+
+section#appointment .container .formulaire-image{
+    width: 40%;
+    background-color: #1fb3bf;
+    height: 100px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+section#appointment .container .formulaire-image img{
+    width: 100%;
+}
+
+section#appointment .container .formulaire form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;  
+}
+
+/* section#appointement .container .formulaire input.nom{ */
+    input{
+        display: block;
+        outline: none;
+        border: none;
+        height: 2rem;
+        width: 100%;
+        margin: auto;
+        margin-bottom: 1.5rem;
+        padding: 0.2rem 1rem;
+        color: gray;
+        transition: all 0.1s ease-in-out;
+        background-color: #f9f9fb;
+    
+        &:focus{
+          outline: none;
+          border: none;
+        }
+    
+        &:hover{
+          outline: 0.5px solid #7175ff;
+          box-shadow: 2px 2px 9px -1px #7175ff;
+        }
+      
+}
+label{
+    display: block;
+    text-align: left;
+    width: 70%;
+    margin: auto;
+    float: left;
+    width: 70%;
+    font-size: small;
+    color: gray;
+    margin-bottom: 0.5rem;
+  }
+
+
+section#appointment .container .formulaire input.nom-famille
+section#appointment .container .formulaire input.email{
+    width: 42%;
+}
+
+section#appointment .container .formulaire input.numero-tel
+section#appointment .container .formulaire input.date{
+    width: 42%;
+}
+
+section#appointment .container .formulaire input.horaire{
+     width: 100%;
+}
+
+section#appointment .container .formulaire button.submit-btn{
+     width: 150px;
+     height: 30px;
+     border-radius: 8px;
+     border: none;
+     background-color: #6699cc;
+     color: white;
+     font-weight: bold;
+     font-size: 1em;
+     cursor: pointer;
+     margin-top: 30px;
+     outline: none;
+}
+
+@media screen and (max-width: 765px) {
+    section#appointment .container .formulaire-image{
+        display: none;
+    
+    }  
+
+    section#appointment .container{
+        justify-content: center;
+    }
+    section#appointment .container .formulaire{
+        width: 50%;
+        margin-right: 0px;
+    }
+
+    section#appointment .container .formulaire h3{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px){
+    section#appointment .container .formulaire{
+        width: 55%;
+    
+    }
+
+    section#appointment .container .formulaire input.horaire,
+    section#appointment .container .formulaire input.horaire,
+    section#appointment .container .formulaire input.horaire,
+    section#appointment .container .formulaire input.horaire,
+    section#appointment .container .formulaire input.horaire,
+    section#appointment .container .formulaire input.horaire,
+    section#appointment .container .formulaire input.horaire{
+        width: 100%;
+    }
+
+    section#appointment .container{
+        padding: 30px 10px ;
+    }
+
+
+}
